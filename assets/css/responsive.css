@@ -1,0 +1,117 @@
+@media screen and (max-width:1160px) {
+    .content .items {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.2rem;
+        row-gap: 2rem;
+        column-gap: 1rem;
+    }
+}
+
+@media screen and (max-width:940px) {
+    .content {
+        width: 100%;
+    }
+
+    .content .items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4rem;
+    }
+
+    .content {
+        padding-top: 5rem;
+    }
+
+    .left-aside {
+        position: absolute;
+        left: -1000px;
+        width: 100%;
+        background-color: var(--blue);
+        transition: all 200ms;
+    }
+
+    .left-aside.active {
+        left: 0;
+        top: 5.6rem;
+        width: 100%;
+        height: 100%;
+        z-index: 30;
+    }
+
+    .right-aside {
+        position: absolute;
+        top: -500px;
+        width: 100%;
+        background-color: var(--blue);
+        transition: all 200ms;
+        z-index: 30;
+    }
+
+    .right-aside.active {
+        right: 0;
+        top: 5.6rem;
+        width: 100%;
+        height: 100%;
+        z-index: 30;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .nav-btn {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        background-color: var(--secondary-blue);
+        position: absolute;
+        width: 100%;
+        height: 25rem;
+        z-index: 50;
+        top: -500px;
+        transition: all 250ms;
+    }
+
+    header nav ul.open{
+        top: 5.6rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .content .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .top {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    footer li {
+        color: white;
+        text-align: center;
+    }
+
+    .download {
+        background-color: var(--blue);
+        border: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .content .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
