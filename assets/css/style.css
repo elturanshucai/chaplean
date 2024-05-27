@@ -60,7 +60,7 @@ header .header-top {
     padding: 1.2rem 1.6rem;
     background-color: var(--header);
     backdrop-filter: blur(5px);
-    
+
 }
 
 header nav ul {
@@ -266,6 +266,11 @@ main::-webkit-scrollbar {
     padding: 3.2rem;
     border-radius: 2.4rem;
     background-color: var(--secondary-blue);
+    transition: all 200ms;
+}
+
+.content-item:hover {
+    border:2px solid var(--blue-border);
 }
 
 .content-item h3 {
